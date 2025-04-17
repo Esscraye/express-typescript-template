@@ -1,6 +1,6 @@
-# 🚀 Express TypeScript Boilerplate 2024
+# 🚀 Express TypeScript Boilerplate 2025
 
-[![CI](https://github.com/edwinhern/express-typescript-2024/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/edwinhern/express-typescript-2024/actions/workflows/ci.yml)
+[![CI](https://github.com/Esscraye/express-typescript-template/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/Esscraye/express-typescript-template/actions/workflows/ci.yml)
 
 ```code
 Hey There! 🙌
@@ -9,7 +9,9 @@ Hey There! 🙌
 
 ## 🌟 Introduction
 
-Welcome to the Express TypeScript Boilerplate 2024 – a streamlined, efficient, and scalable foundation for building powerful backend services with modern tools and practices in Express.js and TypeScript.
+Welcome to the Express TypeScript Boilerplate 2025 – a streamlined, efficient, and scalable foundation for building powerful backend services with modern tools and practices in Express.js and TypeScript.
+
+This repository is a fork of this [repository](https://github.com/edwinhern/express-typescript-2024)
 
 ## 💡 Motivation
 
@@ -35,7 +37,8 @@ This boilerplate aims to:
 - 📃 API Response Standardization: `ServiceResponse` class for consistent API responses
 - 🐳 Docker Support: Ready for containerization and deployment
 - 📝 Input Validation with Zod: Strongly typed request validation using `Zod`
-- 🧩 Swagger UI: Interactive API documentation generated from Zod schemas
+- 🧩 Swagger UI: Interactive API documentation generated from Zod schemas -> `/swagger.json` and `/swagger` for easy testing
+- 🌐 Database Setup: MySQL database configuration and seed data
 
 ## 🛠️ Getting Started
 
@@ -47,8 +50,8 @@ For a visual guide, watch the [video demo](https://github.com/user-attachments/a
 
 #### Step 1: 🚀 Initial Setup
 
-- Clone the repository: `git clone https://github.com/edwinhern/express-typescript-2024.git`
-- Navigate: `cd express-typescript-2024`
+- Clone the repository: `git clone https://github.com/Esscraye/express-typescript-template.git`
+- Navigate: `cd express-typescript-template`
 - Install dependencies: `npm ci`
 
 #### Step 2: ⚙️ Environment Configuration

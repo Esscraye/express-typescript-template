@@ -1,4 +1,4 @@
-import express from "express";
+import express, { type Request, type Response } from "express";
 import { StatusCodes } from "http-status-codes";
 import request from "supertest";
 
@@ -10,8 +10,10 @@ describe("Request Logger Middleware", () => {
 
 	beforeAll(() => {
 		app.use(requestLogger);
-		app.get("/success", (req, res) => res.status(StatusCodes.OK).send("Success"));
-		app.get("/redirect", (req, res) => res.redirect("/success"));
+		app.get("/success", (req: Request, res: Response) => {
+			res.status(StatusCodes.OK).send("Success");
+		});
+		app.get("/redirect", (req: Request, res: Response) => res.redirect("/success"));
 		app.get("/error", () => {
 			throw new Error("Test error");
 		});

@@ -4,7 +4,17 @@ import type { ZodError, ZodSchema } from "zod";
 
 import { ServiceResponse } from "@/common/models/serviceResponse";
 
-export const handleServiceResponse = (serviceResponse: ServiceResponse<unknown>, response: Response) => {
+export const handleServiceResponse = (serviceResponse: ServiceResponse<unknown> | undefined, response: Response) => {
+	// Handle the case where serviceResponse is undefined
+	if (!serviceResponse) {
+		return response.status(StatusCodes.INTERNAL_SERVER_ERROR).send({
+			success: false,
+			message: "An unexpected error occurred: Service response is undefined",
+			responseObject: null,
+			statusCode: StatusCodes.INTERNAL_SERVER_ERROR,
+		})
+	}
+
 	return response.status(serviceResponse.statusCode).send(serviceResponse);
 };
 
@@ -16,6 +26,6 @@ export const validateRequest = (schema: ZodSchema) => (req: Request, res: Respon
 		const errorMessage = `Invalid input: ${(err as ZodError).errors.map((e) => e.message).join(", ")}`;
 		const statusCode = StatusCodes.BAD_REQUEST;
 		const serviceResponse = ServiceResponse.failure(errorMessage, null, statusCode);
-		return handleServiceResponse(serviceResponse, res);
+		handleServiceResponse(serviceResponse, res);
 	}
 };
