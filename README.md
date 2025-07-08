@@ -104,12 +104,19 @@ We'd love to hear your feedback and suggestions for further improvements. Feel f
 │   │   ├── __tests__
 │   │   │   ├── errorHandler.test.ts
 │   │   │   └── requestLogger.test.ts
+│   │   ├── config
+│   │   │   └── database.ts
 │   │   ├── middleware
 │   │   │   ├── errorHandler.ts
 │   │   │   ├── rateLimiter.ts
 │   │   │   └── requestLogger.ts
 │   │   ├── models
 │   │   │   └── serviceResponse.ts
+│   │   ├── seeders
+│   │   │   └── user-seeder.ts
+│   │   ├── templates
+│   │   │   └── mail
+│   │   │       └── mailTemplate.html
 │   │   └── utils
 │   │       ├── commonValidation.ts
 │   │       ├── envConfig.ts
