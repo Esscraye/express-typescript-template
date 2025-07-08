@@ -52,7 +52,7 @@ For a visual guide, watch the [video demo](https://github.com/user-attachments/a
 
 - Clone the repository: `git clone https://github.com/Esscraye/express-typescript-template.git`
 - Navigate: `cd express-typescript-template`
-- Install dependencies: `npm ci`
+- Install dependencies: `pnpm install`
 
 #### Step 2: ⚙️ Environment Configuration
 
@@ -61,9 +61,9 @@ For a visual guide, watch the [video demo](https://github.com/user-attachments/a
 
 #### Step 3: 🏃‍♂️ Running the Project
 
-- Development Mode: `npm run dev`
-- Building: `npm run build`
-- Production Mode: Set `.env` to `NODE_ENV="production"` then `npm run build && npm run start`
+- Development Mode: `pnpm dev`
+- Building: `pnpm build`
+- Production Mode: Set `NODE_ENV="production"` in `.env` then `pnpm build && pnpm start`
 
 ## 🤝 Feedback and Contributions
 
@@ -118,6 +118,4 @@ We'd love to hear your feedback and suggestions for further improvements. Feel f
 │   └── server.ts
 ├── tsconfig.json
 └── vite.config.mts
-
-14 directories, 31 files
 ```
